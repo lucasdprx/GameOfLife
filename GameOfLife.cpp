@@ -103,3 +103,9 @@ void GameOfLife::StartGameOfLife(std::vector<int>& grid, std::vector<int>& alive
         DebugGrid(grid, sizeX, sizeY);
     }
 }
+
+//J'evite  de parcourir toute la grille pour verifier les conditions de jeu pour optimiser le plus possible les performance.
+//Je check que les cellules morte qui sont autour des cellules vivante
+//Pour le chrono,  j'utilise "std::this_thread::sleep_for(std::chrono::milliseconds(1000LL));" je trouve ça plus simple d'utilisation.
+
+
